@@ -19,9 +19,6 @@ spec:
         app: linkding
     spec:
       containers:
-      volumes:
-      - name: test-vol
-        emptyDir: {}
       - image: sissbruecker/linkding:latest
         name: linkding
         volumeMounts:
@@ -29,4 +26,8 @@ spec:
           name: test-vol
         ports:
         - containerPort: 9090
+
+      volumes:
+      - name: test-vol
+        emptyDir: {}
 status: {}
