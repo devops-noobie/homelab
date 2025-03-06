@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: linkding-service  # Name of the Service
+spec:
+  type: NodePort             # Service type
+  selector:
+    app: linkding              # Selector to match Pods
+  ports:
+    - port: 9090             # Port exposed by the Service
+      targetPort: 9090       # Port on the Pods
+      nodePort: 30090        # Optional: Static port on the nodes (default range: 30000-32767)
