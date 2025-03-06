@@ -28,5 +28,5 @@ spec:
         - mountPath: /test-linkding
           name: test-vol
         ports:
-          containerPort: 9090
+        - containerPort: 9090
 status: {}
