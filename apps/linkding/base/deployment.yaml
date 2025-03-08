@@ -22,7 +22,7 @@ spec:
       - image: sissbruecker/linkding:latest
         name: linkding
         volumeMounts:
-        - mountPath: /test-linkding
+        - mountPath: /etc/linkding/data
           name: test-vol
         ports:
         - containerPort: 9090
