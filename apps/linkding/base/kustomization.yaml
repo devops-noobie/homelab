@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: linkding
 resources:
   - namespace.yaml
+  - pvc.yaml
   - deployment.yaml
   - svc.yaml
 
