@@ -18,6 +18,10 @@ spec:
       labels:
         app: linkding
     spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 3000
       containers:
       - image: sissbruecker/linkding:latest
         name: linkding
@@ -26,6 +30,11 @@ spec:
           name: test-vol
         ports:
         - containerPort: 9090
+
+        securityContext:
+          allowPrivilegeEscalation: false # Disable privilege escalation
+          capabilities:
+            drop: ["ALL"] # Drop all capabilities
 
       volumes:
       - name: test-vol
