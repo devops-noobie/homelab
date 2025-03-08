@@ -29,5 +29,6 @@ spec:
 
       volumes:
       - name: test-vol
-        emptyDir: {}
+        persistentVolumeClaim: 
+          claimName: linkding-volume-pvc
 status: {}
